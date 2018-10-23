@@ -1,0 +1,26 @@
+{
+  "name": "caragpe-palindrome",
+  "version": "0.1.0",
+  "description": "Palindrome detector",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caragpe/js_tutorial.git"
+  },
+  "keywords": [
+    "palindrome",
+    "javascript"
+  ],
+  "author": "Carlos A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caragpe/js_tutorial/issues"
+  },
+  "homepage": "https://github.com/caragpe/js_tutorial#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
