@@ -1,8 +1,14 @@
-//Reverses a string
-function reverse(string) {
-  return Array.from(string).reverse().join("");
+String.prototype.reverse = function() {
+  return Array.from(this).reverse().join("")
 }
 
+String.prototype.blank = function() {
+  return !!this.match(/^\s*$/g)
+}
+
+Array.prototype.last = function() {
+  return this.slice(-1)
+}
 
 // Defines a Phrase object
 function Phrase(content) {
@@ -13,7 +19,7 @@ function Phrase(content) {
   },
 
   this.palindrome = function() {
-    return this.processedContent() === reverse(this.processedContent());
+    return this.processedContent() === this.processedContent().reverse();
   }
 }
 
