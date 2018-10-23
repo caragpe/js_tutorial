@@ -8,9 +8,18 @@ function reverse(string) {
 function Phrase(content) {
   this.content = content,
 
-//Returns true for a palindrome, false otherwise
+  this.processedContent = function(){
+    return this.content.toLowerCase();
+  },
+
   this.palindrome = function() {
-    let processedContent = this.content.toLowerCase();
-    return processedContent.toLowerCase() === reverse(processedContent);
+    return this.processedContent() === reverse(this.processedContent());
   }
 }
+
+function TranslatedPhrase(content, translation) {
+  this.content = content;
+  this.translation = translation;
+}
+
+TranslatedPhrase.prototype = new Phrase();
