@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/caragpe/js_tutorial/issues"
   },
-  "homepage": "https://github.com/caragpe/js_tutorial#readme"
+  "homepage": "https://github.com/caragpe/js_tutorial#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
 }
