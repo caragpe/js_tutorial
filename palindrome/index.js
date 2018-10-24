@@ -16,11 +16,15 @@ Array.prototype.last = function() {
 function Phrase(content) {
   this.content = content,
 
-  this.processedContent = function(){
-    return this.content.toLowerCase();
-  },
+  this.letters = function letters() {
+    return this.content;
+  }
 
-  this.palindrome = function() {
+  this.processedContent = function processedContent(){
+    return this.content.toLowerCase();
+  }
+
+  this.palindrome = function palindrome() {
     return this.processedContent() === this.processedContent().reverse();
   }
 }
