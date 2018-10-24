@@ -23,16 +23,22 @@ describe("Phrase", function () {
       assert(mixedCasedPalindrome.palindrome())
     });
 
-    it("should return empty palindrome for string without alphabetic characters", function() {
-      let noAlpha = new Phrase("12345");
-      assert.strictEqual(noAlpha.letters(), '')
+    it("should return true for a complex palindrome", function() {
+      let mixedCasedPalindrome = new Phrase("Madam, i'm adam.");
+      assert(mixedCasedPalindrome.palindrome())
     });
+
   });
   
   describe("#letter", function() {
     it("should return only letter.", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
+    });
+
+    it("should return empty string", function() {
+      let noAlpha = new Phrase("12345");
+      assert.strictEqual(noAlpha.letters(), '')
     });
   });
 });

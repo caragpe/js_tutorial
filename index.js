@@ -4,15 +4,6 @@ String.prototype.reverse = function() {
   return Array.from(this).reverse().join("")
 }
 
-String.prototype.blank = function() {
-  return !!this.match(/^\s*$/g)
-}
-
-Array.prototype.last = function() {
-  return this.slice(-1)
-}
-
-// Defines a Phrase object
 function Phrase(content) {
   this.content = content,
 
@@ -21,7 +12,7 @@ function Phrase(content) {
   }
 
   this.processedContent = function processedContent(){
-    return this.content.toLowerCase();
+    return this.letters().toLowerCase();
   }
 
   this.palindrome = function palindrome() {
