@@ -5,24 +5,17 @@ String.prototype.reverse = function() {
 }
 
 function Phrase(content) {
-  this.content = content,
+  this.content = content
+}
 
-  this.letters = function letters() {
-    return (this.content.match(/[a-z]/gi) || []).join("")
-  }
+Phrase.prototype.letters = function() {
+  return (this.content.match(/[a-z]/gi) || []).join("")
+}
 
-  this.processedContent = function processedContent(){
+Phrase.prototype.processedContent = function() {
     return this.letters().toLowerCase();
-  }
-
-  this.palindrome = function palindrome() {
-    return this.processedContent() === this.processedContent().reverse();
-  }
 }
 
-function TranslatedPhrase(content, translation) {
-  this.content = content;
-  this.translation = translation;
+Phrase.prototype.palindrome = function() {
+  return this.processedContent() === this.processedContent().reverse();
 }
-
-TranslatedPhrase.prototype = new Phrase();
