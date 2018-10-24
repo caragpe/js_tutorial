@@ -17,7 +17,7 @@ function Phrase(content) {
   this.content = content,
 
   this.letters = function letters() {
-    return this.content.match(/[a-z]/gi).join("")
+    return (this.content.match(/[a-z]/gi) || []).join("")
   }
 
   this.processedContent = function processedContent(){

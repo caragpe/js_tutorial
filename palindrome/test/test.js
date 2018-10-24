@@ -17,6 +17,16 @@ describe("Phrase", function () {
       let mixedCasedPalindrome = new Phrase("Racecar");
       assert(mixedCasedPalindrome.palindrome())
     });
+
+    it("should return true for a mixed-case palindrome", function() {
+      let mixedCasedPalindrome = new Phrase("Racecar");
+      assert(mixedCasedPalindrome.palindrome())
+    });
+
+    it("should return empty palindrome for string without alphabetic characters", function() {
+      let noAlpha = new Phrase("12345");
+      assert.strictEqual(noAlpha.letters(), '')
+    });
   });
   
   describe("#letter", function() {
