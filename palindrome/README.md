@@ -7,7 +7,7 @@ The module can be used as follows:
 ```
 $ npm install --global caragpe-palindrome
 $ vim test.js
-let Phrase = require("mhartl-palindrome");
+let Phrase = require("caragpe-palindrome");
 let napoleonsLament = new Phrase("Able was I, ere I saw Elba.");
 console.log(napoleonsLament.palindrome());
 $ node test.js
