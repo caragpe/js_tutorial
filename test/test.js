@@ -28,6 +28,10 @@ describe("Phrase", function () {
       assert(mixedCasedPalindrome.palindrome())
     });
 
+    it("should return false for empty string", function() {
+      let emptyString = new Phrase("");
+      assert(!emptyString.palindrome())
+    })
   });
   
   describe("#letter", function() {

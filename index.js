@@ -17,5 +17,7 @@ Phrase.prototype.processedContent = function() {
 }
 
 Phrase.prototype.palindrome = function() {
-  return this.processedContent() === this.processedContent().reverse();
+  if (this.processedContent().length) {
+    return this.processedContent() === this.processedContent().reverse();
+  } else { return false; }
 }
